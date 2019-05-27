@@ -173,7 +173,7 @@ def addDevices() {
 		}
 
 		if (!d) {
-			log.debug "Creating Roku Device with dni: ${selectedDevice.value} - ${selectedDevice.value.networkAddress} : ${selectedDevice.value.deviceAddress}"
+			log.debug "Creating Roku Device with dni: ${selectedDevice.value.name} - ${selectedDevice.value.networkAddress} : ${selectedDevice.value.deviceAddress}"
 			addChildDevice("madmouse", "Roku", selectedDevice.value.networkAddress, selectedDevice?.value.hub, [
 				"label": selectedDevice?.value?.name ?: $deviceName,
 				"data": [
